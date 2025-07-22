@@ -15,9 +15,11 @@ const Navigation = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
-            <div className="bg-primary text-primary-foreground p-2 rounded-lg">
-              <span className="font-bold text-lg">🌾</span>
-            </div>
+            <img 
+              src="/lovable-uploads/4a0ee4b3-bd60-45f6-83ac-1824ea1715b4.png" 
+              alt="Freedom Farms Logo" 
+              className="h-8 w-8"
+            />
             <span className="font-bold text-xl text-foreground">Freedom Farms</span>
           </Link>
 

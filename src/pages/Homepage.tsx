@@ -165,7 +165,7 @@ const Homepage = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              📰 Freedom Farms Dispatch
+              Freedom Farms Dispatch
             </h2>
             <p className="text-lg text-muted-foreground">
               Latest insights from our growing community
@@ -198,7 +198,7 @@ const Homepage = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              ⚙️ Platform Overview
+              Platform Overview
             </h2>
             <p className="text-lg text-muted-foreground">
               Everything you need to succeed in the modern food economy
@@ -259,7 +259,7 @@ const Homepage = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              💡 Platform Vision
+              Platform Vision
             </h2>
             <p className="text-xl text-muted-foreground max-w-4xl mx-auto">
               A one-stop-shop app for everyone in the food system — from farmers to processors, 

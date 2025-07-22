@@ -8,6 +8,12 @@ import Homepage from "./pages/Homepage";
 import FarmersPage from "./pages/FarmersPage";
 import RetailersPage from "./pages/RetailersPage";
 import ConsumersPage from "./pages/ConsumersPage";
+import CommunityEventsPage from "./pages/CommunityEventsPage";
+import CertificationPage from "./pages/CertificationPage";
+import TermsPage from "./pages/TermsPage";
+import ConnectBuyersPage from "./pages/ConnectBuyersPage";
+import ConnectSellersPage from "./pages/ConnectSellersPage";
+import MarketParticipationPage from "./pages/MarketParticipationPage";
 import NotFound from "./pages/NotFound";
 import Navigation from "./components/Navigation";
 
@@ -26,6 +32,12 @@ const App = () => (
             <Route path="/farmers" element={<FarmersPage />} />
             <Route path="/retailers" element={<RetailersPage />} />
             <Route path="/consumers" element={<ConsumersPage />} />
+            <Route path="/community-events" element={<CommunityEventsPage />} />
+            <Route path="/certification" element={<CertificationPage />} />
+            <Route path="/terms" element={<TermsPage />} />
+            <Route path="/connect-buyers" element={<ConnectBuyersPage />} />
+            <Route path="/connect-sellers" element={<ConnectSellersPage />} />
+            <Route path="/market-participation" element={<MarketParticipationPage />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
