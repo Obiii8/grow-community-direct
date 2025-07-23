@@ -1,5 +1,6 @@
-import { BarChart3, Brain, Calendar, MessageCircle, Bell, Users, DollarSign } from 'lucide-react';
+import { BarChart3, Brain, Calendar, MessageCircle, Bell, Users, DollarSign, TrendingUp } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { Link } from 'react-router-dom';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import farmerTech from '@/assets/farmer-tech.jpg';
@@ -19,7 +20,7 @@ const FarmersPage = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-subtle">
+    <div className="min-h-screen bg-gradient-to-br from-green-50 via-yellow-50 to-green-100">
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden">
         <div 
@@ -46,12 +47,16 @@ const FarmersPage = () => {
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
-                  Start Selling Today
-                </Button>
-                <Button variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-earth">
-                  Watch Demo
-                </Button>
+                <Link to="/marketplace-listing">
+                  <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
+                    Start Selling Today
+                  </Button>
+                </Link>
+                <Link to="/watch-demo">
+                  <Button variant="outline" size="lg" className="bg-green-100 border-green-200 text-neutral-800 hover:bg-green-200 hover:text-neutral-900 font-bold tracking-wide">
+                    Watch Demo
+                  </Button>
+                </Link>
               </div>
             </div>
             
@@ -84,11 +89,11 @@ const FarmersPage = () => {
         </div>
       </section>
 
-      {/* Connect with Buyers & Sellers */}
-      <section className="py-20 bg-background">
+      {/* Connect with Buyers & Sellers & Market Participation */}
+      <section className="py-20 bg-gradient-to-br from-green-50 via-yellow-50 to-green-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+            <h2 className="text-3xl md:text-4xl font-extrabold text-green-900 mb-4 drop-shadow-lg" style={{ letterSpacing: '0.03em' }}>
               Connect & Collaborate
             </h2>
             <p className="text-lg text-muted-foreground">
@@ -97,6 +102,7 @@ const FarmersPage = () => {
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
+            {/* Connect with Buyers Card */}
             <Card className="bg-white shadow-card hover:shadow-hover transition-all duration-300">
               <CardHeader>
                 <div className="bg-primary/10 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
@@ -112,9 +118,39 @@ const FarmersPage = () => {
                   <li>• Community-supported agriculture</li>
                   <li>• Farmers market coordination</li>
                 </ul>
+                <div className="mt-4">
+                  <Link to="/connect-buyers">
+                    <Button size="sm" className="bg-green-700 text-white px-6 py-2 rounded-full shadow-lg hover:bg-green-800 transition font-bold">Connect Now</Button>
+                  </Link>
+                </div>
               </CardContent>
             </Card>
 
+            {/* Market Participation Dashboard & Analytics Card */}
+            <Card className="bg-white shadow-card hover:shadow-hover transition-all duration-300">
+              <CardHeader>
+                <div className="bg-[#ff914d]/10 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
+                  <TrendingUp className="h-6 w-6 text-[#ff914d]" />
+                </div>
+                <CardTitle>Market Participation, Dashboard and Analytics</CardTitle>
+                <CardDescription>Real-time pricing, demand, performance, and more</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <ul className="space-y-2 text-sm text-muted-foreground">
+                  <li>• Market pricing & demand forecasting</li>
+                  <li>• Performance analytics & revenue tools</li>
+                  <li>• Blockchain traceability & trust score</li>
+                  <li>• Notifications & optimization</li>
+                </ul>
+                <div className="mt-4">
+                  <Link to="/market-participation-dashboard">
+                    <Button size="sm" className="bg-[#ff914d] text-white px-6 py-2 rounded-full shadow-lg hover:bg-[#ff914d]/90 transition font-bold">Dashboard</Button>
+                  </Link>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Connect with Sellers Card */}
             <Card className="bg-white shadow-card hover:shadow-hover transition-all duration-300">
               <CardHeader>
                 <div className="bg-trust/10 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
@@ -130,77 +166,39 @@ const FarmersPage = () => {
                   <li>• Collaborative purchasing power</li>
                   <li>• Community bulletin board</li>
                 </ul>
-              </CardContent>
-            </Card>
-
-            <Card className="bg-white shadow-card hover:shadow-hover transition-all duration-300">
-              <CardHeader>
-                <div className="bg-nature/30 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
-                  <BarChart3 className="h-6 w-6 text-nature" />
+                <div className="mt-4">
+                  <Link to="/connect-sellers">
+                    <Button size="sm" className="bg-trust text-white px-6 py-2 rounded-full shadow-lg hover:bg-trust/80 transition font-bold">Connect Now</Button>
+                  </Link>
                 </div>
-                <CardTitle>Market Participation</CardTitle>
-                <CardDescription>Dashboard and analytics</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <ul className="space-y-2 text-sm text-muted-foreground">
-                  <li>• Real-time market pricing</li>
-                  <li>• Demand forecasting</li>
-                  <li>• Performance analytics</li>
-                  <li>• Revenue optimization</li>
-                </ul>
               </CardContent>
             </Card>
           </div>
         </div>
       </section>
 
-      {/* Freedom Farm AI (Beta) */}
-      <section className="py-20 bg-gradient-tech">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <Badge variant="secondary" className="mb-4 bg-white/20 text-white">
-              Beta Access Available
-            </Badge>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              🧠 Freedom Farm AI
-            </h2>
-            <p className="text-xl text-white/90 max-w-3xl mx-auto">
-              Harness the power of artificial intelligence to optimize your farm operations, 
-              predict outcomes, and make data-driven decisions.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {aiFeatures.map((feature, index) => (
-              <Card key={index} className="bg-white/95 backdrop-blur-sm shadow-hover">
-                <CardHeader>
-                  <div className="bg-trust/10 w-10 h-10 rounded-lg flex items-center justify-center mb-3">
-                    <Brain className="h-5 w-5 text-trust" />
-                  </div>
-                  <CardTitle className="text-lg">{feature.title}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-sm text-muted-foreground">{feature.description}</p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-
-          <div className="text-center mt-12">
-            <Button size="lg" className="bg-white text-trust hover:bg-white/90">
-              Request Beta Access
-            </Button>
-          </div>
+      {/* Freedom Farm AI Section */}
+      <section className="py-20 bg-gradient-to-br from-green-50 via-yellow-50 to-green-100">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl md:text-4xl font-extrabold text-green-900 mb-4 drop-shadow-lg" style={{ letterSpacing: '0.03em' }}>
+            Freedom Farm AI (Beta)
+          </h2>
+          <p className="text-lg text-muted-foreground mb-8">
+            AI-powered tools for smarter farming: Yield Predictor, Cost Tracker, Pathogen Diagnostic, Crop Calendar (coming soon)
+          </p>
+          <Link to="/freedom-farm-ai">
+            <Button size="lg" className="bg-primary text-white px-8 py-3 rounded-full shadow-lg hover:bg-primary/90 transition font-bold">Explore Freedom Farm AI</Button>
+          </Link>
         </div>
       </section>
 
       {/* Notification Center */}
-      <section className="py-20 bg-background">
+      <section className="py-20 bg-gradient-to-br from-green-50 via-yellow-50 to-green-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-                🔔 Notification Center
+              <h2 className="text-3xl md:text-4xl font-extrabold text-green-900 mb-6 drop-shadow-lg" style={{ letterSpacing: '0.03em' }}>
+                Notification Center
               </h2>
               <p className="text-lg text-muted-foreground mb-8">
                 Stay informed with buyer requests, weather alerts, market events, and more. 
@@ -260,10 +258,10 @@ const FarmersPage = () => {
       {/* CTA Section */}
       <section className="py-20 bg-primary">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl md:text-4xl font-bold text-primary-foreground mb-6">
+          <h2 className="text-3xl md:text-4xl font-extrabold text-green-900 mb-6 drop-shadow-lg" style={{ letterSpacing: '0.03em' }}>
             Ready to Transform Your Farm?
           </h2>
-          <p className="text-xl text-primary-foreground/90 mb-8">
+          <p className="text-xl text-green-800 mb-8">
             Join thousands of farmers already using Freedom Farms to grow their business 
             and connect with their community.
           </p>
@@ -271,7 +269,7 @@ const FarmersPage = () => {
             <Button size="lg" variant="secondary" className="bg-white text-primary hover:bg-white/90">
               Start Free Trial
             </Button>
-            <Button variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-primary">
+            <Button size="lg" className="bg-white text-green-700 border-green-700 border-2 hover:bg-green-50 hover:text-green-900 font-bold">
               Schedule Demo
             </Button>
           </div>

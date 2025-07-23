@@ -66,7 +66,7 @@ const RetailersPage = () => {
                 <Button size="lg" className="bg-white text-trust hover:bg-white/90">
                   Access Marketplace
                 </Button>
-                <Button variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-trust">
+                <Button size="lg" className="bg-white text-blue-700 border-blue-700 border-2 hover:bg-blue-50 hover:text-blue-900 font-bold">
                   View Live Demo
                 </Button>
               </div>
@@ -103,7 +103,7 @@ const RetailersPage = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              📈 Open Live Marketplace
+              Open Live Marketplace
             </h2>
             <p className="text-lg text-muted-foreground">
               Dynamic pricing, real-time bidding, and instant purchasing options
@@ -203,7 +203,7 @@ const RetailersPage = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              📅 Weekly Planner
+              Weekly Planner
             </h2>
             <p className="text-lg text-muted-foreground">
               Schedule custom orders and optimize your inventory management
@@ -273,7 +273,7 @@ const RetailersPage = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              🚚 Delivery Coordination Tools
+              Delivery Coordination Tools
             </h2>
             <p className="text-lg text-muted-foreground">
               Streamlined logistics with API-connected dashboard and route optimization

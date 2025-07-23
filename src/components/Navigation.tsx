@@ -24,17 +24,17 @@ const Navigation = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
-            <Link 
-              to="/farmers" 
-              className={`text-sm font-medium transition-colors hover:text-primary ${
-                isActive('/farmers') ? 'text-primary' : 'text-muted-foreground'
-              }`}
-            >
-              For Farmers
+          <div className="hidden md:flex items-center space-x-6">
+            <Link to="/" className={isActive("/") ? "text-primary font-bold" : "text-foreground hover:text-primary transition"}>
+              Home
             </Link>
-            <Link 
-              to="/retailers" 
+            <Link to="/marketplace" className={isActive("/marketplace") ? "text-primary font-bold" : "text-foreground hover:text-primary transition"}>
+              Marketplace
+            </Link>
+            <Link to="/farmers" className={isActive("/farmers") ? "text-primary font-bold" : "text-foreground hover:text-primary transition"}>
+              Farmers
+            </Link>
+            <Link to="/retailers" 
               className={`text-sm font-medium transition-colors hover:text-primary ${
                 isActive('/retailers') ? 'text-primary' : 'text-muted-foreground'
               }`}
@@ -49,9 +49,11 @@ const Navigation = () => {
             >
               For Consumers
             </Link>
-            <Button variant="outline" size="sm">
-              Join the Network
-            </Button>
+            <Link to="/join-network">
+              <Button variant="outline" size="sm">
+                Join the Network
+              </Button>
+            </Link>
           </div>
 
           {/* Mobile menu button */}
@@ -92,9 +94,24 @@ const Navigation = () => {
                 For Consumers
               </Link>
               <div className="pt-2">
-                <Button variant="outline" size="sm" className="w-full">
-                  Join the Network
-                </Button>
+                <Link to="/join-network">
+                  <Button variant="outline" size="sm" className="w-full">
+                    Join the Network
+                  </Button>
+                </Link>
+              </div>
+              <div className={isOpen ? "block" : "hidden"}>
+                <div className="flex flex-col space-y-4 mt-4">
+                  <Link to="/" className={isActive("/") ? "text-primary font-bold" : "text-foreground hover:text-primary transition"} onClick={() => setIsOpen(false)}>
+                    Home
+                  </Link>
+                  <Link to="/marketplace" className={isActive("/marketplace") ? "text-primary font-bold" : "text-foreground hover:text-primary transition"} onClick={() => setIsOpen(false)}>
+                    Marketplace
+                  </Link>
+                  <Link to="/farmers" className={isActive("/farmers") ? "text-primary font-bold" : "text-foreground hover:text-primary transition"} onClick={() => setIsOpen(false)}>
+                    Farmers
+                  </Link>
+                </div>
               </div>
             </div>
           </div>

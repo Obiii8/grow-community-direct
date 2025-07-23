@@ -405,7 +405,7 @@ const ConsumersPage = () => {
             <Button size="lg" variant="secondary" className="bg-white text-primary hover:bg-white/90">
               Download App
             </Button>
-            <Button variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-primary">
+            <Button size="lg" className="bg-white text-green-700 border-green-700 border-2 hover:bg-green-50 hover:text-green-900 font-bold">
               Find Local Markets
             </Button>
           </div>
